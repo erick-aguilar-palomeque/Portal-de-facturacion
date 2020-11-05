@@ -12,7 +12,8 @@ btnMenu.addEventListener('click', (e) => {
         menu.style.setProperty('visibility', 'visible');
         conMenu.style.setProperty('transform', `translateX(${0}%)`)
 
-        cont.style.setProperty('width', `${80}%`)
+        cont.style.setProperty('width', `calc(${100}% - var(--menu-width))`)
+            // cont.style.setProperty('width', `${80}%`)
         cont.style.setProperty('float', `right`)
 
         body.style.setProperty('overflow-y', 'hidden')
