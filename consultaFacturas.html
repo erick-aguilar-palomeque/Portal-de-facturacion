@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./css/icons.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/consultaFacturasStyle.css">
+    <!-- bootstrap -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+
 
     <title>Document</title>
 </head>
@@ -47,23 +50,255 @@
                 <fieldset>
                     <legend>Filtros</legend>
                     <div class="up">
-                        <div class="anio">anio</div>
-                        <div class="mes">mes</div>
-                        <div class="dia">dia</div>
-                        <div class="hora-inicial">hora</div>
-                        <div class="hora-final">hora</div>
+                        <div class="anio">
+                            Año:
+                            <input type="number" value="2020" min="2000" max="2020" step="1">
+                        </div>
+                        <div class="mes">
+                            Mes:
+                            <select name="anio-mes" id="anio-mes" class="select"></select>
+                        </div>
+                        <div class="dia">
+                            Día:
+                            <input type="number" value="1" min="1" max="31" step="1">
+                        </div>
+                        <div class="hora-inicial">
+                            Hora inicial:
+                            <div class="selects">
+                                <select name="hora-inicial-hora" id="hora-inicial-hora" class="select"></select>
+                                <select name="hora-inicial-minuto" id="hora-inicial-minuto" class="select"></select>
+                                <select name="hora-inicial-segundo" id="hora-inicial-segundo" class="select"></select>
+                            </div>
+                        </div>
+                        <div class="hora-final">
+                            Hora final:
+                            <div class="selects">
+                                <select name="hora-final-hora" id="hora-final-hora" class="select"></select>
+                                <select name="hora-final-minuto" id="hora-final-minuto" class="select"></select>
+                                <select name="hora-final-segundo" id="hora-final-segundo" class="select"></select>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="down">
-                        <button class="boton" id="btn-search-filtros">Buscar
-                        </button>
+                        <a href="#open-modal-uno">
+                            <button class="boton-generico" id="btn-search-filtros">Buscar
+                            </button>
+                        </a>
                     </div>
-
                 </fieldset>
             </div>
+            <!--Fin filtros -->
+
+            <div class="tabla">
+                <table border="1">
+                    <tr class="encabezado">
+
+                        <td id="seleccionar">
+                            <div class="seleccionar">
+                                <input type="checkbox">
+                            </div>
+                        </td>
+                        <td id="folio-fiscal">
+                            <div class="folio-fiscal">
+                                <span>Folio fiscal</span>
+                                <input type="text">
+                            </div>
+                        </td>
+                        <td id="rfc-emisor">
+                            <div class="rfc-emisor">
+                                <span>RFC emisor</span>
+                                <input type="text">
+                            </div>
+                        </td>
+                        <td id="descripcion">
+                            <div class="descripcion">
+                                <span>Descripción</span>
+                                <input type="text">
+                            </div>
+                        </td>
+                        <td id="fecha-hora-emision">
+                            <div class="fecha-hora-emision">
+                                <span>Fecha y hora de emisión</span>
+                            </div>
+                        </td>
+                        <td id="status">
+                            <div class="status">
+                                <span>Status</span>
+                                <select name="status" id="status"></select>
+                            </div>
+                        </td>
+                        <td id="visualizar">
+                            <div class="visualizar">
+                                <span>Visualizar</span>
+                            </div>
+                        </td>
+                        <td id="descargar">
+                            <div class="descargar">
+                                <span>Descargar</span>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <i class="icon-doc-inv"></i>
+                        </td>
+                        <td>
+                            <button class="boton-table">PDF
+                            </button>
+                            <button class="boton-table">XML
+                            </button>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <i class="icon-doc-inv"></i>
+                        </td>
+                        <td>
+                            <button class="boton-table">PDF
+                            </button>
+                            <button class="boton-table">XML
+                            </button>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <i class="icon-doc-inv"></i>
+                        </td>
+                        <td>
+                            <button class="boton-table">PDF
+                            </button>
+                            <button class="boton-table">XML
+                            </button>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <i class="icon-doc-inv"></i>
+                        </td>
+                        <td>
+                            <button class="boton-table">PDF
+                            </button>
+                            <button class="boton-table">XML
+                            </button>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <i class="icon-doc-inv"></i>
+                        </td>
+                        <td>
+                            <button class="boton-table">PDF
+                            </button>
+                            <button class="boton-table">XML
+                            </button>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <i class="icon-doc-inv"></i>
+                        </td>
+                        <td>
+                            <button class="boton-table">PDF
+                            </button>
+                            <button class="boton-table">XML
+                            </button>
+
+                        </td>
+                    </tr>
+
+                    <!-- <thead>
+
+                    </thead>
+                    <tbody>
+
+                    </tbody> -->
+                </table>
+            </div>
+            <!--fin tabla-->
+            <div class="facturas-seleccionadas">
+                <button class="boton-generico">Enviar facturas
+                </button>
+                <button class="boton-generico">PDF
+                </button>
+                <button class="boton-generico">XML
+                </button>
+            </div>
+
+            <div class="modal-envio-facturas" id="open-modal-uno">
+                <a href="#close">
+                    <p>Hola</p>
+                </a>
+            </div>
+
+
         </div>
+        <!--fin contentenido-->
     </div>
+    <!--fin pseudo body-->
 
     <script src="./js/menu.js"></script>
+    <!-- bootstrp -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- <script src="./src/bootstrap-input-spinner.js"></script> -->
+
 </body>
 
 </html>

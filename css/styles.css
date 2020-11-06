@@ -29,10 +29,13 @@
     --f-subtitle-font-size: 1.5rem;
     --f-normal-font-size: 1rem;
     --margin: 1rem;
+    --margin-top: 2rem;
     /* FORM SIZES */
     --form-width: 25rem;
     --form-height: 21rem;
     --form-input-height: 2.5rem;
+    /*PADDINGS*/
+    --padding-botones-generales: 0.5rem;
 }
 
 * {
@@ -303,4 +306,13 @@ body {
     font-weight: var(--bold-weight);
     height: 1.5rem;
     padding: 0 1rem;
+}
+
+.boton-generico {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border: 0;
+    font-family: var(--body-font);
+    font-weight: var(--bold-weight);
+    padding: var(--padding-botones-generales);
 }
